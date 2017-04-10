@@ -32,6 +32,8 @@ function animate() {
 
 /************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
 
+
+
 function swapPhoto() {
 	//Add code here to access the #slideShow element.
 	//Access the img element and replace its source
@@ -42,6 +44,8 @@ function swapPhoto() {
 
 // Counter for the mImages array
 var mCurrentIndex = 0;
+
+
 
 // XMLHttpRequest variable
 var mRequest = new XMLHttpRequest();
@@ -54,7 +58,7 @@ var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = 'insert_url_here_to_image_json';
+var mURL = "images-short.json"; 
 
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
@@ -77,12 +81,39 @@ window.addEventListener('load', function() {
 	
 	console.log('window loaded');
 
+
+
 }, false);
 
-function GalleryImage() {
-	//implement me as an object to hold the following data about an image:
-	//1. location where photo was taken
-	//2. description of photo
-	//3. the date when the photo was taken
-	//4. either a String (src URL) or an an HTMLImageObject (bitmap of the photo. https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
+function GalleryImage(loc, des, date, img) {
+	this.location = loc;
+	this.description = des;
+	this.date = date;
+	this.img = img;	
 }
+
+
+mRequest.onreadystatechange = function() {
+	// Do something interesting if file is opened successfully
+	if (mRequest.readyState == 4 && mRequest.status == 200) {
+		try {
+			// Let’s try and see if we can parse JSON
+			mJson = JSON.parse(mRequest.responseText);
+			// Let’s print out the JSON; It will likely show as “obj”
+			//console.log(mJson["images"].length);
+			for(var i = 0; i < mJson["images"].length;i++){
+				mImages.push(new GalleryImage(mJson["images"][i]["imgLocation"],mJson["images"][i]["description"],mJson["images"][i]["date"],mJson["images"][i]["imgPath"]));
+			}
+
+
+		} catch(err) {
+			console.log(err.message)
+		}
+	}
+};
+
+	
+
+mRequest.open("GET", mURL, true);
+
+mRequest.send();

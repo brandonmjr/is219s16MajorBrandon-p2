@@ -71,9 +71,17 @@ var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mURL = "images-short.json"; 
 
 
+//I found this code snippet on stack overflow: http://stackoverflow.com/questions/1314383/how-to-check-if-a-querystring-value-is-present-via-javascript
+var field = 'json';
+var url = window.location.href;
+if(url.indexOf('?' + field + '=') != -1)
+    mURL = getQueryVariable("json");
+else if(url.indexOf('&' + field + '=') != -1)
+    mURL = getQueryVariable("json");
+else
+	var mURL = "images.json"; 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
 //@param A GalleryImage object. Use this method for an event handler for loading a gallery Image object (optional).
 function makeGalleryImageOnloadCallback(galleryImage) {
@@ -156,3 +164,14 @@ mRequest.onreadystatechange = function() {
 mRequest.open("GET", mURL, true);
 
 mRequest.send();
+
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == variable) {
+      return pair[1];
+    }
+  } 
+}

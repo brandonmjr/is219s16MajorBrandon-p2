@@ -1,82 +1,34 @@
 {
     "images": [
         {
-            "imgPath": "img/places/australia.jpg",
-            "imgLocation": "Australia",
-            "description": "Loch Ard Gorge",
-            "date": "01/01/2016"
-        },
-        {
-            "imgPath": "img/places/austria.jpg",
-            "imgLocation": "Austria",
-            "description": "Austrian chapel",
-            "date": "01/02/2016"
-        },
-        {
-            "imgPath": "img/places/france.jpg",
-            "imgLocation": "Paris",
-            "description": "Eiffel Tower",
+            "imgPath": "http://33.media.tumblr.com/ca21bf60fd701a2aeb84def658fa0767/tumblr_nn50a10eHS1tejz4lo1_540.gif",
+            "imgLocation": "Outerspace",
+            "description": "Nebula Simulation",
             "date": "01/03/2016"
         },
         {
-            "imgPath": "img/places/greece.jpg",
-            "imgLocation": "Greece",
-            "description": "Greek coastline",
+            "imgPath": "http://jedi-counsel.net/a/astronomy/gif-space-travel/tumblr_lvx2wmLAvi1ql7pyro1_500.gif",
+            "imgLocation": "North Pole",
+            "description": "Starshower",
+            "date": "01/01/2016"
+        },
+        {
+            "imgPath": "https://media.giphy.com/media/GqWJnK5pWX5Fm/giphy.gif",
+            "imgLocation": "Somewhere in the universe far far away",
+            "description": "Black Hole Simulation",
+            "date": "01/02/2016"
+        },
+        {
+            "imgPath": "https://media.giphy.com/media/wgQMyNO6l6DVS/giphy.gif",
+            "imgLocation": "The sun",
+            "description": "The sun",
             "date": "01/04/2016"
         },
         {
-            "imgPath": "img/places/hungary.jpg",
-            "imgLocation": "Hungary",
-            "description": "Budapest skyline",
+            "imgPath": "https://a.disquscdn.com/get?url=http%3A%2F%2F33.media.tumblr.com%2Fbb00f588171b69ba8c92eacae9f23d6f%2Ftumblr_nhmimkGQH91r7qpeho1_500.gif&key=uIAPHbIzF1W65DKL0PFIwA",
+            "imgLocation": "Earth",
+            "description": "Orbiting the earth",
             "date": "01/05/2016"
-        },
-        {
-            "imgPath": "img/places/india.jpg",
-            "imgLocation": "India",
-            "description": "Taj Mahal",
-            "date": "01/06/2016"
-        },
-        {
-            "imgPath": "img/places/italy.jpg",
-            "imgLocation": "Italy",
-            "description": "Venice",
-            "date": "01/07/2016"
-        },
-        {
-            "imgPath": "img/places/japan.jpg",
-            "imgLocation": "Japan",
-            "description": "Hirosaki Castle",
-            "date": "01/08/2016"
-        },
-        {
-            "imgPath": "img/places/korea.jpg",
-            "imgLocation": "South Korea",
-            "description": "Seoul",
-            "date": "01/09/2016"
-        },
-        {
-            "imgPath": "img/places/norway.jpg",
-            "imgLocation": "Norway",
-            "description": "Countryside mountains",
-            "date": "01/10/2016"
-        },
-        {
-            "imgPath": "img/places/switzerland.jpg",
-            "imgLocation": "Switzerland",
-            "description": "Lake castle",
-            "date": "01/11/2016"
-        },
-        {
-            "imgPath": "img/places/thailand.jpg",
-            "imgLocation": "Thailand",
-            "description": "Beachline",
-            "date": "01/12/2016"
-        },
-        {
-            "imgPath": "img/places/turkey.jpg",
-            "imgLocation": "Turkey",
-            "description": "Istanbul",
-            "date": "01/13/2016"
         }
   ]
 }

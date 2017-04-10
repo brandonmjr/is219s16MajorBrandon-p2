@@ -40,8 +40,8 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 
-	mCurrentIndex = mCurrentIndex % 4;
-	if(mCurrentIndex < 0){mCurrentIndex=4 + mCurrentIndex;}
+	mCurrentIndex = mCurrentIndex % mImages.length;
+	if(mCurrentIndex < 0){mCurrentIndex=mImages.length + mCurrentIndex;}
 	$("#slideShow img#photo").attr("src",mImages[mCurrentIndex].img);
 	$(".details p.location").html("Location: "+mImages[mCurrentIndex].location);
 	$(".details p.date").html("Date: "+mImages[mCurrentIndex].date);

@@ -20,8 +20,10 @@ body {
 
 .photoHolder {
 	position: relative;
-	width: 80%;
-	margin: 0 auto;
+    width: 80%;
+    height: 380px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .moreIndicator {
@@ -47,8 +49,10 @@ body {
 }
 
 .thumbnail {
-	position: relative;
-	box-shadow: 1px 3px 20px 0px;
+	width: 520px;
+    height: auto;
+    position: relative;
+    box-shadow: 1px 3px 20px 0px;
 }
 
 
